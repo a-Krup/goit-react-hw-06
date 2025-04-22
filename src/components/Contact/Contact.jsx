@@ -16,8 +16,8 @@ const Contact = ({ contact, onDelete }) => {
         </div>
       </div>
       <button
-        onClick={() => onDelete(contact.id)}
         className={styles.deleteButton}
+        onClick={() => onDelete(contact.id)}
       >
         Delete
       </button>

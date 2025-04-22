@@ -35,7 +35,7 @@ const ContactForm = ({ onAddContact }) => {
             name="name"
             type="text"
             id="name"
-            placeholder=""
+            placeholder="Name"
             className={styles.input}
             autoComplete="name"
           />
@@ -50,7 +50,7 @@ const ContactForm = ({ onAddContact }) => {
             name="number"
             type="text"
             id="number"
-            placeholder=""
+            placeholder="Number"
             className={styles.input}
             autoComplete="tel"
           />
