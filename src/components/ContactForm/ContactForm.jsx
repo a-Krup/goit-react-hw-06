@@ -1,9 +1,13 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { addContact } from "../../redux/contactsSlice";
 import styles from "./ContactForm.module.css";
 
-const ContactForm = ({ onAddContact }) => {
+const ContactForm = () => {
+  const dispatch = useDispatch();
+
   const validationSchema = Yup.object({
     name: Yup.string()
       .min(3, "Name must be at least 3 characters")
@@ -16,7 +20,7 @@ const ContactForm = ({ onAddContact }) => {
   });
 
   const handleSubmit = (values, { resetForm }) => {
-    onAddContact(values.name, values.number);
+    dispatch(addContact({ name: values.name, number: values.number }));
     resetForm();
   };
 
