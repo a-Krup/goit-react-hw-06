@@ -9,6 +9,7 @@ import {
   selectContacts,
 } from "./redux/contactsSlice";
 import { selectNameFilter, changeFilter } from "./redux/filtersSlice";
+import './App.css';
 
 const App = () => {
   const dispatch = useDispatch();
